@@ -7,21 +7,7 @@
     <title>My simple site</title>
 </head>
 <body>
-    <p>Welcome to what will be my new portfolio!</p>
+    <p>Welcome to what will be my new portfolio! Now hosted on my home server and served with nginx!</p>
     <p>Under construction. See <a href="https://www.miketekin.com">miketekin.com</a> for updates. <a href="https://drive.google.com/file/d/1D9hsh0atII6sia5Kbeyxq95g-C6CndAG/view?usp=sharing">You can view my resume here.</a></p>
-    <hr />
-    <div>
-      <p>This is a serverless contact form built using AWS.</p>
-      <p>How it works:</p>
-      <ol>
-        <li>The user fills out the form and hits send.</li>
-        <li>The users browser sends an HTTP POST request with the form data in the request body to an API endpoint specified by AWS API Gateway.</li>
-        <li>When the API endpoint receives the HTTP request, it validates the request and then passes the request body to a Lambda function.</li>
-        <li>The Lambda function extracts the form data from the request body then it uses that data to build the body of the email.</li>
-        <li>The Lambda function then invokes AWS Send Email Service (SES) passing it the email data.</li>
-        <li>Finally, SES takes the email data and turns it into an actual email that it sends through AWS mail servers.</li>
-      </ol>
-      <p>Side note: This form uses a <a href="https://steveafrost.com/articles/honeypotting-simple-spam-prevention/">honeypot</a> for spam protection.</p>
-    </div>
 </body>
 </html>
