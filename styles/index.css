@@ -61,7 +61,10 @@ footer {
     text-align: center;
     background-color: black;
     color: white;
-    padding: 2rem 1rem;
+    /* padding: 2rem 1rem; */
+    /* padding-top: 2rem;
+    padding-bottom: 2rem; */
+    padding: 2rem 0rem;
     font-size: 1.25em;
 }
 
