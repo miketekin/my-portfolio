@@ -65,16 +65,17 @@ main {
     color: black;
 }
 
-
 footer {
-    position: relative;
+    display: flex;
+    column-gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
     bottom: 0;
     text-align: center;
     background-color: black;
     color: white;
     padding: 2rem 1rem;
     font-size: 1em;
-    /* min-height: 100%; */
 }
 
 footer a:link,

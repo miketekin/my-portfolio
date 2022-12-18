@@ -73,8 +73,10 @@ main a:visited {
 
 
 footer {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    column-gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
     bottom: 0;
     text-align: center;
     background-color: black;
