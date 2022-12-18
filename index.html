@@ -6,15 +6,53 @@
     <meta name="description" content="See Mike Tekin's developer portfolio">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mike's self-hosted site</title>
+    <link rel="icon" type="image/png" href="./images/icon.png">
     <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
     <header>
         <h1>MT</h1>
-        <!-- <nav>
+        <nav>
             <a href="/blog/latest-post.html">Latest Post</a>
             <a href="/about.html">About</a>
-        </nav> -->
+            <div class="dropdown">
+                <button name="Blog" class="dropbtn">Blog</button>
+                <span class="arrow down"></span>
+                <div class="dropdown-content">
+                    <span>November</span>
+                    <a href="" class="dropdown-item-border">5th</a>
+                    <a href="" class="dropdown-item-border">8th</a>
+                    <a href="" class="dropdown-item-border">Contact Form</a>
+                    <a href="" class="dropdown-item-border">Home Server Setup</a>
+                    <span>December</span>
+                    <a href="" class="dropdown-item-border">Site Development</a>
+                </div>
+            </div>
+            <!-- <div class="dropdown">
+                <button name="Blog" class="dropbtn">Blog</button>
+                <span class="arrow down"></span>
+                <div class="dropdown-content">
+                    <button name="November" class="dropbtn">November</button>
+                    <span class="arrow down"></span>
+                    <div class="dropdown-content">
+                        <a href="">-5th</a>
+                        <a href="">-8th</a>
+                        <a href="">-Contact Form</a>
+                        <a href="">-Home Server Setup</a>
+                    </div>
+                    <button name="Blog" class="dropbtn">December</button>
+                    <span class="arrow down"></span>
+                    <div class="dropdown-content">
+                        <a href="">-Site Development</a>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <button name="Blog">
+                <div>
+                    <span class="arrow down">Blog</span>
+                </div>
+            </button> -->
+        </nav>
     </header>
     <main style="text-align:center;">
         <p>Welcome to what will be my new portfolio!</p>
@@ -27,7 +65,7 @@
         <br />
         <br />
     </main>
-    <footer>
+    <!-- <footer>
         <span>Have any questions or suggestions for me? <br />
             <a href="https://www.miketekin.com/about" style="color: white;">Let me know!</a> :)
         </span>
@@ -37,6 +75,30 @@
             <img src="./images/linkedin_white_44dp.png" class="social-links"></a>
         <a href="https://github.com/miketekin" aria-label="github profile">
             <img src="./images/github_white_44dp.png" class="social-links"></a>
+    </footer> -->
+    <footer>
+        <div>
+            <span style="font-size:large">Recent Posts:</span><br />
+            <a href="./blog/latest-post.html">Self-Hosted Site</a><br/>
+            <a href="./blog/server-setup.html">Server Setup</a><br />
+            <a href="./blog/contact-form.html">Serverless Contact Form</a><br />
+            <br />
+        </div>
+        <div>
+            <span style="font-size:large">Project Links:</span><br />
+                <a href="https://miketekin.dev">MikeTekin.dev</a><br/>
+                <a href="https://miketekin.gatsbyjs.io">Contact Form Example</a><br />
+                <br />
+        </div>
+        <div>
+            <span style="font-size:large">Have any questions or suggestions for me?</span><br />
+            <a href="https://www.miketekin.com/about">Send a quick message!</a> :)<br />
+            <br />
+            <a href="https://www.linkedin.com/in/miketekin/" aria-label="linkedin profile">
+                <img src="./images/linkedin_white_44dp.png" class="social-links"></a>
+            <a href="https://github.com/miketekin" aria-label="github profile">
+                <img src="./images/github_white_44dp.png" class="social-links"></a>
+        </div>
     </footer>
 </body>
 </html>

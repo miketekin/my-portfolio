@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="See my latest blog post detailing recent work for my portfolio.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serverless Contact Form</title>
+    <link rel="stylesheet" href="../styles/article.css">
+</head>
+<body>
+    <header>
+        <h1>MT</h1>
+        <nav>
+            <a href="/blog/latest-post.html">Latest Post</a>
+            <a href="/about.html">About</a>
+            <div class="dropdown">
+                <button name="Blog" class="dropbtn">Blog</button>
+                <span class="arrow down"></span>
+                <div class="dropdown-content">
+                    <span>November</span>
+                    <a href="" class="dropdown-item-border">5th</a>
+                    <a href="" class="dropdown-item-border">8th</a>
+                    <a href="" class="dropdown-item-border">Contact Form</a>
+                    <a href="" class="dropdown-item-border">Home Server Setup</a>
+                    <span>December</span>
+                    <a href="" class="dropdown-item-border">Site Development</a>
+                </div>
+            </div>
+            <!-- <div class="dropdown">
+                <button name="Blog" class="dropbtn">Blog</button>
+                <span class="arrow down"></span>
+                <div class="dropdown-content">
+                    <button name="November" class="dropbtn">November</button>
+                    <span class="arrow down"></span>
+                    <div class="dropdown-content">
+                        <a href="">-5th</a>
+                        <a href="">-8th</a>
+                        <a href="">-Contact Form</a>
+                        <a href="">-Home Server Setup</a>
+                    </div>
+                    <button name="Blog" class="dropbtn">December</button>
+                    <span class="arrow down"></span>
+                    <div class="dropdown-content">
+                        <a href="">-Site Development</a>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <button name="Blog">
+                <div>
+                    <span class="arrow down">Blog</span>
+                </div>
+            </button> -->
+        </nav>
+    </header>
+    <a href="https://labs.openai.com/sc/wbmnUqXm1LeNjXaRxtdDrMrf">
+        <img src="../images/simple-table-small.png" title="Image created with Dall-e 2" 
+        aria-label="AI digital art of a small sidelit room with an office desk, a cat on a stool, and a vase on a table."
+        style="
+        object-fit: cover;
+        max-height: 340px;
+        width: 100%;
+        "/>
+    </a>
+    <main style="padding: 2rem; margin-top: 2%;">
+        <h2>Serverless Contact Form</h2>
+        <span class="date">November 17th, 2022</span>
+        <p>
+            <h3>Summary since the last update:</h3>
+            <ul>
+                <li>Created a gatsby site. Currently very barebones at <s>miketekin.dev</s> <a href="https://miketekin.gatsbyjs.io/">miketekin.gatsbyjs.io</a> (the site is no longer at miketekin.dev. That domain will now be hosting my new project - a site hosted on my own server)</li>
+                <li>Built a serverless contact form (using AWS's Lambda, API Gateway, IAM, and SES) with a honeypot for spam filtering. You can view it at <s>miketekin.dev</s> <a href="https://miketekin.gatsbyjs.io/">miketekin.gatsbyjs.io</a></li>
+                <li>The email address I put up on this site's front page was <a href="https://www.ionos.com/digitalguide/e-mail/e-mail-security/protecting-your-email-address-how-to-do-it/">harvested</a> and has been receiving spam</li>
+                <li>Took down the email address and replaced it with links to my socials and a contact form using google forms</li>
+            </ul>
+        </p>
+        <p>
+            A few days after putting my new email on the front page of this site, I woke up to 7 very obvious spam messages asking me if I needed help with my website.
+        </p>
+        <p>
+            My new email must have been harvested off my homepage by bots. I wanted to stop it from being harvested and come up with some kind of alternative contact solution before working on anything else.
+        </p>
+        <p>
+            So, I took the address off the home page and replaced it with links to my socials and a google form. It wasn't an ideal solution because 1) it comes with google branding and looks kind of amateurish and 2) if I was going to have a contact form, I wanted to build it myself. This entire site is a learning exercise for me as well as a portfolio. So, I'm happy to work on anything I can build myself that will help me develop my skills.
+        </p>
+        <p>
+            I researched alternatives to the Google form and ended up with the following options:
+        </p>
+        <p>
+            <ol>
+                <li>Keep my email address on the front page but hide it from bots by using javascript to load the address in after the rest of the page loads or by embedding it in an image. The email address could also be a throwaway that just forwards all the emails to another address. If it was ever harvested, I could just ditch the throwaway address.</li>
+                <li>Build my own contact form - hosted on my own server - and include a captcha and/or a honeypot to stop bots from spamming me through the form.</li>
+                <li>Use some prebuilt or template-based form from some SaaS (like Jotform or Formspree)</li>
+                <li>Setup my site on a platform like Netlify or WordPress which include add-ons and tools for form-handling</li>
+                <li>Build a serverless contact form using AWS</li>
+            </ol>
+        </p>
+        <p>
+            <s>Option 1</s>: I want to make it as easy as possible for visitors to this site to send me a message and a contact form directly on the site seemed like the easiest way to do that.
+        </p>
+        <p>
+            <s>Option 2, 3, 5</s>: This site is hosted on Google sites and is really limited as far as what code I can include and what will run. I can embed code and when I preview it here before inserting it everything looks fine. But as soon as I hit "insert", it creates elements where the styling is off.
+        </p>
+        <p>
+            <s>Option 4</s>: I felt like using those tools would become a crutch that I would have to keep leaning on.
+        </p>
+        <p>
+            In the end, I decided I would create another site for my portfolio (at miketekin.dev) because it gave me more control and Gatsby was one of the most popular options.
+        </p>
+        <p>
+            I had heard a lot about <a href="https://jamstack.org/generators/">Gatsby and compared it with similar platforms</a>. I found that Gatsby experience was mentioned in a number of job postings in my area. That wasn't the case for Netlify. So, although I had heard better things about Netlify, I decided to go with Gatsby because I wanted experience that was a bit more marketable. 
+        </p>
+        <p>
+            On my Gatsby site, I could have tried out options 2, 3, 4, or 5 since I had a lot more control. But since I didn't want to maintain my own server and wanted to learn about creating a serverless contact form, I decided to build one using AWS.
+        </p>
+        <p>
+            <h3>What I'm considering working on next:</h3>
+            <ul>
+                <li>Gatsby is still doing much of the work and, because of that, my understanding of everything works together isn't as complete as it could be. I might try to rebuild my site with as few tools as possible.</li>
+                <li>Cloning the look and functionality of this site onto miketekin.dev could help me learn a lot.</li>
+                <li>I might try to work on learning the fundamentals of JS before doing any other project because I feel like my progress on completing this serverless contact form was slow because I'm still new to JS and tried to take a <a href="https://lifehacker.com/learning-just-in-case-versus-just-in-time-5486247">"learn just in time rather than just in case"</a> approach.</li>
+                <li>I think it would be even cooler to have a chatbot on my site and I think that would be a fun project and a solid next step after creating a contact form.</li>
+            </ul>
+        </p>
+    </main>
+    <footer>
+        <div>
+            <span style="font-size:large">Recent Posts:</span><br />
+            <a href="./latest-post.html">Self-Hosted Site</a><br/>
+            <a href="./server-setup.html">Server Setup</a><br />
+            <a href="./contact-form.html">Serverless Contact Form</a><br />
+            <br />
+        </div>
+        <div>
+            <span style="font-size:large">Project Links:</span><br />
+                <a href="https://miketekin.dev">MikeTekin.dev</a><br/>
+                <a href="https://miketekin.gatsbyjs.io">Contact Form Example</a><br />
+                <br />
+        </div>
+        <div>
+            <span style="font-size:large">Have any questions or suggestions for me?</span><br />
+            <a href="https://www.miketekin.com/about">Send a quick message!</a> :)<br />
+            <br />
+            <a href="https://www.linkedin.com/in/miketekin/" aria-label="linkedin profile">
+                <img src="../images/linkedin_white_44dp.png" class="social-links"></a>
+            <a href="https://github.com/miketekin" aria-label="github profile">
+                <img src="../images/github_white_44dp.png" class="social-links"></a>
+        </div>
+    </footer>
+</body>
+</html>

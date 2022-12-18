@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="See my latest blog post detailing recent work for my portfolio.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Setup</title>
+    <link rel="stylesheet" href="../styles/article.css">
+</head>
+<body>
+    <header>
+        <h1>MT</h1>
+        <nav>
+            <a href="/blog/latest-post.html">Latest Post</a>
+            <a href="/about.html">About</a>
+            <div class="dropdown">
+                <button name="Blog" class="dropbtn">Blog</button>
+                <span class="arrow down"></span>
+                <div class="dropdown-content">
+                    <span>November</span>
+                    <a href="" class="dropdown-item-border">5th</a>
+                    <a href="" class="dropdown-item-border">8th</a>
+                    <a href="" class="dropdown-item-border">Contact Form</a>
+                    <a href="" class="dropdown-item-border">Home Server Setup</a>
+                    <span>December</span>
+                    <a href="" class="dropdown-item-border">Site Development</a>
+                </div>
+            </div>
+            <!-- <div class="dropdown">
+                <button name="Blog" class="dropbtn">Blog</button>
+                <span class="arrow down"></span>
+                <div class="dropdown-content">
+                    <button name="November" class="dropbtn">November</button>
+                    <span class="arrow down"></span>
+                    <div class="dropdown-content">
+                        <a href="">-5th</a>
+                        <a href="">-8th</a>
+                        <a href="">-Contact Form</a>
+                        <a href="">-Home Server Setup</a>
+                    </div>
+                    <button name="Blog" class="dropbtn">December</button>
+                    <span class="arrow down"></span>
+                    <div class="dropdown-content">
+                        <a href="">-Site Development</a>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <button name="Blog">
+                <div>
+                    <span class="arrow down">Blog</span>
+                </div>
+            </button> -->
+        </nav>
+    </header>
+    <a href="https://labs.openai.com/sc/wbmnUqXm1LeNjXaRxtdDrMrf">
+        <img src="../images/simple-table-small.png" title="Image created with Dall-e 2" 
+        aria-label="AI digital art of a small sidelit room with an office desk, a cat on a stool, and a vase on a table."
+        style="
+        object-fit: cover;
+        max-height: 340px;
+        width: 100%;
+        "/>
+    </a>
+    <main style="padding: 2rem; margin-top: 2%;">
+        <h2>Server Setup</h2>
+        <span class="date">November 27th, 2022</span>
+        <p>
+            <h3>Summary since the last update:</h3>
+            <ul>
+                <li>Set up Ubuntu Server on an old laptop</li>
+                <li>Worked on securing Ubuntu Server and my home network</li>
+                <li>Switched to Cloudflare as my name server for miketekin.dev</li>
+                <li>Tested my network security</li>
+                <li>Pointed miketekin.dev to my home network</li>
+                <li>Set up dynamic DNS with Cloudflare using ddclient</li>
+                <li>Configured Cloudflare to enhance security</li>
+                <li>Set up Nginx to serve my new website</li>
+            </ul>
+        </p>
+        <p>
+            <h3>Deciding to host the site myself:</h3>
+        </p>
+        <p>
+            I wanted the code for my gatsby site and my serverless contact form to be public to showcase my work. However, when I went to make the repository public, I realized the repository was filled with gatsby created files that I wasn't familiar with - files that could contain sensitive information. I wanted to avoid going through all of them and didn't like the idea of putting them up publicly as part of my project when I didn't even know the purpose of many of the files.
+        </p>
+        <p>
+            That's when I decided I wanted to host my website without a site generator like gatsby and all of the dependencies that it brings with it. Hosting my site myself would give me even more control and allow me to be more confident in what it is I'm sharing. Along with it being a great learning experience, it also sounded fun - so that was a bonus.
+        </p>
+        <p>
+            <h3>Where to host:</h3>
+        </p>
+        <p>
+            My first step was to figure out where I would be hosting the site.
+        </p>
+        <p>
+            First, I considered using a virtual private server like DigitalOcean or Linode. But they cost around $70/year, and I didn't think that was a necessary expenditure to pay indefinitely for my portfolio - and if I ever wanted to stop paying for it, I didn't want to lose anything.
+        </p>
+        <p>
+            That led me to the decision to run my own server.
+        </p>
+        <p>
+            I'm considering investing in an old dell optiplex tower because I can get one relatively cheap, and it should do everything I need. But I just wanted to test the waters first. So, I decided to turn an old laptop I had that was gathering dust into a server.
+        </p>
+        <p>
+            <h3>Choosing an operating system:</h3>
+        </p>
+        <p>
+            I decided to go with Ubuntu Server because Ubuntu is my daily driver, and so Ubuntu Server felt familiar and friendly. I also wanted to stick with something similar to Ubuntu to continue developing my Linux and Ubuntu knowledge. What I learned on Ubuntu Server could carry over to my Ubuntu desktop work and vice versa. It didn't hurt that it was also free.
+        </p>
+        <p>
+            Lately, I've been having trouble with my Ubuntu desktop freezing or just losing the display altogether. I've read that Debian is more stable, and I'm considering switching over in time. But, by the time I'm ready to make a switch, I may learn more about other server OSs that I would prefer.
+        </p>
+        <p>
+            <h3>Setting up and securing my server:</h3>
+        </p>
+        <p>
+            The installation and initial setup were quick and easy. But my top priority was making sure it would be secure.
+        </p>
+        <p>
+            I looked up some guides on securing/hardening Ubuntu Server and knocked a few steps off those lists.
+        </p>
+        <p>
+            At the top of my list was configuring Ubuntu's Uncomplicated Firewall and installing and configuring fail2ban. Both were easy to figure out and set up, and I'm happy with how they're both working.
+        </p>
+        <p>
+            <h3>Securing my network:</h3>
+        </p>
+        <p>
+            I was confident in my server's security. So, my next step was to make sure my network was secure. I looked up some guides on doing that, which included things like using tools to scan my network for open ports and other vulnerabilities.
+        </p>
+        <p>
+            <h3>Pointing my domain to my home network:</h3>
+        </p>
+        <p>
+            My system had the latest security updates, my firewall was configured, my ports were locked down, and fail2ban was set up - next, I decided it was time to point my domain to my server. 
+        </p>
+        <p>
+            I was apprehensive about pointing my domain to my home network. After doing some research, I decided to use Cloudflare as a CDN. "Cloudflare hides your origin server IP addresses for traffic you proxy to Cloudflare." My domain is registered through Google Domains, and Google offers a CDN through Google Cloud, but it requires a subscription - which I've been avoiding for this small project.
+        </p>
+        <p>
+            <h3>Setting up Cloudflare as my CDN:</h3>
+        </p>
+        <p>
+            Cloudflare kept popping up as a recommendation. I researched CDNs and Cloudflare and decided that's what I would go with because it was free and came with some built-in security features that Google Domains alone did not provide.
+        </p>
+        <p>
+            Using Cloudflare involved setting up Cloudflare as a custom name server on Google Domains and setting up DNSSEC with them. Fortunately, Cloudflare made this a reasonably pain-free process.
+        </p>
+        <p>
+            <h3>Setting up dynamic DNS:</h3>
+        </p>
+        <p>
+            Next, I set up the DNS records in Cloudflare. I needed to provide an IP address, and, initially, I was going to set up a static IP address for my home network, but that also requires a subscription and I discovered I could instead just use a dynamic DNS which would be free.
+        </p>
+        <p>
+            So I needed to set up dynamic DNS from my ubuntu server. This lead me to ddclient. I ran into several problems setting up ddclient and found multiple recommendations for using a script some random person had made, but I wasn't super comfortable using a random script that I didn't fully understand and didn't want to spend the time learning exactly how it worked (ddclient was also discussed in Ubuntu documentation which gave it some more credibility). So, I kept working on ddclient. Eventually, I got it working, and my server automatically checked my public IP address and updated Cloudflare whenever there was a change.
+        </p>
+        <p>
+            <h3>Routing traffic to my server with port forwarding:</h3>
+        </p>
+        <p>
+            Next, I needed to set up port forwarding so that connections to my home IP would route to my server. This was easy using my Google Home app, which allowed me to reserve an IP address for my server and set up port forwarding for it.
+        </p>
+        <p>
+            <h3>Setting up a web server:</h3>
+        </p>
+        <p>
+            Next, I needed to set up a web server on my server. I found several suggestions but the ones most commonly recommended were Apache and Nginx. I went with Nginx after learning that it is now the most popular web server and is used by large companies that depend on speed, security, and reliability.
+        </p>
+        <p>
+            I installed Nginx and went through the beginner guide to learn how to configure it for a simple static site.
+        </p>
+        <p>
+            <h3>Integrating my server with my website repository on GitHub:</h3>
+        </p>
+        <p>
+            Finally, all I had left to do was to put together the website files I wanted to serve. I connected my server to GitHub to easily work on the files on my main computer and then pull them into my server where Nginx could serve them.
+        </p>
+        <p>
+            With all of that done, you can now view the barebones site at miketekin.dev. It took me a few days to figure this out and get it working. But, if I needed to do it all again, I could get it done much faster this time.
+        </p>
+        <p>
+            <h3>What I'm considering working on next:</h3>
+            <ul>
+                <li>
+                    Cloning the look of this site and building up miketekin.dev (using just HTML, CSS, and JS)
+                </li>
+                <li>
+                    Adding the serverless contact form to miketekin.dev (or looking into what tools Node provides for creating a contact form)
+                </li>
+                <li>
+                    Looking into Ansible Playbooks for hardening my server
+                </li>
+                <li>
+                    Learning more about Node and Nginx and what they can do for my site/server
+                </li>
+                <li>
+                    Seeing what other cool things I can use my home server for
+                </li>
+            </ul>
+        </p>
+    </main>
+    <footer>
+        <div>
+            <span style="font-size:large">Recent Posts:</span><br />
+            <a href="./latest-post.html">Self-Hosted Site</a><br/>
+            <a href="./server-setup.html">Server Setup</a><br />
+            <a href="./contact-form.html">Serverless Contact Form</a><br />
+            <br />
+        </div>
+        <div>
+            <span style="font-size:large">Project Links:</span><br />
+                <a href="https://miketekin.dev">MikeTekin.dev</a><br/>
+                <a href="https://miketekin.gatsbyjs.io">Contact Form Example</a><br />
+                <br />
+        </div>
+        <div>
+            <span style="font-size:large">Have any questions or suggestions for me?</span><br />
+            <a href="https://www.miketekin.com/about">Send a quick message!</a> :)<br />
+            <br />
+            <a href="https://www.linkedin.com/in/miketekin/" aria-label="linkedin profile">
+                <img src="../images/linkedin_white_44dp.png" class="social-links"></a>
+            <a href="https://github.com/miketekin" aria-label="github profile">
+                <img src="../images/github_white_44dp.png" class="social-links"></a>
+        </div>
+    </footer>
+</body>
+</html>
