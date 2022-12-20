@@ -1,9 +1,9 @@
+/*                  || General styles */
 html, body {
     margin: 0; /*Using this to allow the header background to reach the edge of the viewport*/
 }
 
 body {
-    margin: 0; /*Using this to allow the header background to reach the edge of the viewport*/
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
@@ -28,8 +28,10 @@ h3 {
     font-size: 1em;
     margin-bottom: 0;
 }
+/*----------------------------*/
 
 
+/*                  || Header */
 body > header {
     position: sticky;
     z-index: 1;
@@ -55,6 +57,76 @@ nav {
     justify-content: flex-end;
 }
 
+/* Class used to create the downward facing arrow next to the blog button*/
+.arrow {
+    border: solid white;
+    border-width: 0px 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+}
+.down {
+    transform:rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.dropbtn {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+/* The container <div> needed to position the dropdown content */
+.dropdown {
+    position: relative;
+}
+
+/* Class for adding the | next to the menu options */
+.dropdown-item-border {
+    border: solid rgb(70, 70, 70);
+    border-width: 0px 0px 0px 3px;
+    padding: 3px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    gap:1em;
+    padding: 1em;
+    min-width: 130px;
+    background-color: black;
+    right: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display:grid;
+    /* justify-items:end; */
+}
+
+/* The div for enlarging the background box that appears when hovering over the button */
+.blog-button {
+    padding: .3em;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .blog-button {
+    background-color: rgb(70, 70, 70);
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: rgb(70, 70, 70);
+}
+/*--------------------------*/
+
+
+/*                  || Main */
 main {
     position: relative;
     /* padding: 5%; */
@@ -70,8 +142,10 @@ main a:link,
 main a:visited {
     color: black;
 }
+/*----------------------------*/
 
 
+/*                  || Footer */
 footer {
     display: flex;
     column-gap: 3rem;
@@ -90,109 +164,10 @@ footer a:visited {
     color:white;
 }
 
-
 .social-links {
     width: 50px;
     margin: 0px 5px 0px 5px;
     border-radius: 50%;
     background-image: linear-gradient(rgb(95, 99, 104), rgb(95, 99, 104));
 }
-
-.arrow {
-    border: solid white;
-    border-width: 0px 2px 2px 0;
-    display: inline-block;
-    padding: 3px;
-}
-
-.down {
-    transform:rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
-
-.dropdown-item-border {
-    border: solid white;
-    border-width: 0px 0px 0px 2px;
-    display:inline-block;
-    padding: 3px;
-}
-
-/* button {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-} */
-
-/* Dropdown Button */
-.dropbtn {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    /* display: inline-block; */
-    /* position: relative; */
-    /* display:inline-block; */
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    gap:1em;
-    padding: 1em;
-    /* z-index: 1; */
-    min-width: 130px;
-    background-color: black;
-    /* top: 38px; */
-    right: 0;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
-}
-
-/* .dropdown-content:hover {
-    display: grid;
-} */
-
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display:grid;
-    /* justify-items:end; */
-}
-
-
-  /* Dropdown Content (Hidden by Default) */
-  /* .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  } */
-  
-  /* Links inside the dropdown */
-  /* .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-   */
-  /* Change color of dropdown links on hover */
-  /* .dropdown-content a:hover {background-color: #ddd;}
-   */
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  /* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+/*----------------------------*/
