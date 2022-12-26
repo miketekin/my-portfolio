@@ -32,7 +32,7 @@ h3 {
 
 
 /*                  || Header */
-#header-component {
+header {
     position: sticky;
     z-index: 1;
     display: grid;
