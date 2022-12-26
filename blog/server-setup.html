@@ -7,52 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Server Setup</title>
     <link rel="stylesheet" href="../styles/article.css">
+    <script src="../components/header.js" type="text/javascript" async></script>
+    <script src="../components/footer.js" type="text/javascript" async></script>
 </head>
 <body>
-    <header>
-        <h1>MT</h1>
-        <nav>
-            <a href="./latest-post.html">Latest Post</a>
-            <a href="../index.html">About</a>
-            <div class="dropdown">
-                <div class="blog-button">
-                    <button name="Blog" class="dropbtn">Blog</button>
-                    <span class="arrow down"></span>
-                </div>
-                <div class="dropdown-content">
-                    <span>November</span>
-                    <a href="./contact-form.html" class="dropdown-item-border">Contact Form</a>
-                    <a href="./server-setup.html" class="dropdown-item-border">Home Server Setup</a>
-                    <span>December</span>
-                    <a href="./latest-post.html" class="dropdown-item-border">Site Development</a>
-                </div>
-            </div>
-            <!-- <div class="dropdown">
-                <button name="Blog" class="dropbtn">Blog</button>
-                <span class="arrow down"></span>
-                <div class="dropdown-content">
-                    <button name="November" class="dropbtn">November</button>
-                    <span class="arrow down"></span>
-                    <div class="dropdown-content">
-                        <a href="">-5th</a>
-                        <a href="">-8th</a>
-                        <a href="">-Contact Form</a>
-                        <a href="">-Home Server Setup</a>
-                    </div>
-                    <button name="Blog" class="dropbtn">December</button>
-                    <span class="arrow down"></span>
-                    <div class="dropdown-content">
-                        <a href="">-Site Development</a>
-                    </div>
-                </div>
-            </div> -->
-            <!-- <button name="Blog">
-                <div>
-                    <span class="arrow down">Blog</span>
-                </div>
-            </button> -->
-        </nav>
-    </header>
+    <header-component></header-component>
     <a href="https://labs.openai.com/sc/wbmnUqXm1LeNjXaRxtdDrMrf">
         <img src="../images/simple-table-small.png" title="Image created with Dall-e 2" 
         aria-label="AI digital art of a small sidelit room with an office desk, a cat on a stool, and a vase on a table."
@@ -201,34 +160,6 @@
             </ul>
         </p>
     </main>
-    <footer>
-        <div>
-            <span style="font-size:large">Recent Posts:</span><br />
-            <a href="./latest-post.html">Self-Hosted Site</a><br/>
-            <a href="./server-setup.html">Server Setup</a><br />
-            <a href="./contact-form.html">Serverless Contact Form</a><br />
-            <br />
-        </div>
-        <div>
-            <span style="font-size:large">Project Links:</span><br />
-                <a href="https://miketekin.dev">MikeTekin.dev</a><br/>
-                <a href="https://miketekin.gatsbyjs.io">Contact Form Example</a><br />
-                <br />
-        </div>
-        <div>
-            <span style="font-size:large">
-                Have any questions or <br />
-                suggestions for me?
-            </span>
-            <br />
-            <a href="https://www.miketekin.com/about">Send a quick message!</a> :)
-            <br />
-            <br />
-            <a href="https://www.linkedin.com/in/miketekin/" aria-label="linkedin profile">
-                <img src="../images/linkedin_white_44dp.png" class="social-links"></a>
-            <a href="https://github.com/miketekin" aria-label="github profile">
-                <img src="../images/github_white_44dp.png" class="social-links"></a>
-        </div>
-    </footer>
+    <footer-component></footer-component>
 </body>
 </html>
