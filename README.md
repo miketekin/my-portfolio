@@ -1,1 +1,1 @@
-This is repository for my future portfolio that is currently hosted on my home server and served with Nginx.
+This will be my portfolio once I implement an easy way to write posts that get saved

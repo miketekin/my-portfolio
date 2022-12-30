@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My self-hosted site</title>
+    <title></title>
     <link rel="stylesheet" href="../styles/article.css">
+    <script src="../components/header.js" type="text/javascript" defer></script>
+    <script src="../components/footer.js" type="text/javascript" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Mike's self-hosted portfolio</h1>
-    </header>
-    <main>
-        <p>Welcome to what will be my new portfolio! Now hosted on my home server and served with nginx!</p>
-        <p>Under construction. See <a href="https://www.miketekin.com">miketekin.com</a> for updates. <a href="https://drive.google.com/file/d/1OuDgjVmcidfx4pirQCaJzZf-hj7U_zpf/view?usp=sharing">You can view my resume here.</a></p>    
+    <header-component></header-component>
+    <a href="https://labs.openai.com/sc/wbmnUqXm1LeNjXaRxtdDrMrf">
+        <img src="../images/simple-table-small.png" title="Image created with Dall-e 2" 
+        aria-label="AI digital art of a small sidelit room with an office desk, a cat on a stool, and a vase on a table."
+        style="
+        object-fit: cover;
+        max-height: 340px;
+        width: 100%;
+        "/>
+    </a>
+    <main style="padding: 2rem; margin-top: 2%;">
+        <h2>Title</h2>
+        <span class="date">Month day, Year</span>
     </main>
-    <footer>
-        <a href="www.github.com/miketekin">GitHub</a>
-        <a href="www.linkedin.com/in/miketekin">Linkedin</a>
-    </footer>
+    <footer-component></footer-component>
 </body>
 </html>
