@@ -8,8 +8,8 @@ class Header extends HTMLElement {
             <header>
                 <h1>MT</h1>
                 <nav>
-                    <a href="https://miketekin.dev/blog/latest-post.html">Latest Post</a>
-                    <a href="https://miketekin.dev/index.html">About</a>
+                    <a href="/blog/latest-post.html">Latest Post</a>
+                    <a href="/index.html">About</a>
                     <div class="dropdown">
                         <div class="blog-button">
                             <button name="Blog" class="dropbtn">Blog</button>
@@ -17,10 +17,10 @@ class Header extends HTMLElement {
                         </div>
                         <div class="dropdown-content">
                             <span>November</span>
-                            <a href="https://miketekin.dev/blog/contact-form.html" class="dropdown-item-border">Contact Form</a>
-                            <a href="https://miketekin.dev/blog/server-setup.html" class="dropdown-item-border">Home Server Setup</a>
+                            <a href="/blog/contact-form.html" class="dropdown-item-border">Contact Form</a>
+                            <a href="/blog/server-setup.html" class="dropdown-item-border">Home Server Setup</a>
                             <span>December</span>
-                            <a href="https://miketekin.dev/blog/latest-post.html" class="dropdown-item-border">Site Development</a>
+                            <a href="/blog/latest-post.html" class="dropdown-item-border">Site Development</a>
                         </div>
                     </div>
                 </nav>
